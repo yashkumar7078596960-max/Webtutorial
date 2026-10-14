@@ -1,8 +1,8 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Carara = () => {
-
     const data = [
         {
             hh: "HTML",
@@ -33,61 +33,36 @@ const Carara = () => {
             tt: "Learn how to create the structure of a website.",
             bb: "Learn Node",
             url: "/node"
-        },
-      
-    ]
+        }
+    ];
+
     return (
         <>
-
             <section className="courses">
-
                 <h2>Our Courses</h2>
 
                 <p className="course-text">
                     Start learning web development with simple courses.
                 </p>
 
-
                 <div className="cards">
+                    {data.map((a) => (
+                        <div className="card" key={a.url}>
+                            <h3>{a.hh}</h3>
 
+                            <p>{a.tt}</p>
 
-                    {
-
-                        data.map((a) => {
-                            return (
-                                <>
-                                    <div className="card">
-
-                                        <h3>{a.hh}</h3>
-
-                                        <p>
-                                            {a.tt}
-                                        </p>
-
-                                        <Link to={a.url}>
-                                            <button>
-
-                                                {a.bb}
-                                            </button>
-                                        </Link>
-
-
-                                    </div>
-
-                                </>
-                            )
-                        })
-
-
-
-
-                    }
+                            <Link to={a.url}>
+                                <button>
+                                    {a.bb}
+                                </button>
+                            </Link>
+                        </div>
+                    ))}
                 </div>
-
             </section>
-
         </>
-    )
-}
+    );
+};
 
-export default Carara
+export default Carara;

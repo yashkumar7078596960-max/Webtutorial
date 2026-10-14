@@ -19,8 +19,6 @@ import Python from "./python";
 import Java from "./java";
 import SQL from "./sql";
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -42,15 +40,6 @@ function App() {
         <Route path="/python" element={<Python />} />
         <Route path="/java" element={<Java />} />
         <Route path="sql" element={<SQL />} />
-
-
-
-
-
-
-
-
-
 
       </Routes>
 
