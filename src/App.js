@@ -39,7 +39,7 @@ function App() {
         <Route path="/cpp" element={<CPP />} />
         <Route path="/python" element={<Python />} />
         <Route path="/java" element={<Java />} />
-        <Route path="sql" element={<SQL />} />
+        <Route path="/sql" element={<SQL />} />
 
       </Routes>
 
